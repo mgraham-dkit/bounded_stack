@@ -12,6 +12,5 @@ package com.mycompany.bounded_stack;
 public class Bounded_Stack {
 
     public static void main(String[] args) {
-        System.out.println("Hello World!");
     }
 }

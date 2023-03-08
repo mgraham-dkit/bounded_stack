@@ -11,15 +11,27 @@ import java.util.EmptyStackException;
  * @author grahamm
  */
 public class Stack {
+    private static final int INITIAL_CAPACITY = 10;
+    private final int capacity;
     private Node first;
     private int size;
     
     public Stack() {
         first = null;
         size = 0;
+        capacity = INITIAL_CAPACITY;
+    }
+    
+    public Stack(int capacity){
+        first = null;
+        size = 0;
+        this.capacity = capacity;
     }
     
     public boolean push(int value) {
+        if(isFull()){
+            throw new StackFullException("No space available in stack.");
+        }
         Node newNode = new Node(value);
         if (first == null) {
             first = newNode;
@@ -56,6 +68,9 @@ public class Stack {
         return size;
     }
 
+    public boolean isFull(){
+        return size >= capacity;
+    }
 
     private static class Node {
 
