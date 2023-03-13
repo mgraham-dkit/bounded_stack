@@ -11,8 +11,8 @@ import java.util.EmptyStackException;
  * @author grahamm
  */
 public class Stack {
-    private Node first;
-    private int size;
+    protected Node first;
+    protected int size;
     
     public Stack() {
         first = null;
@@ -55,11 +55,15 @@ public class Stack {
     public int count() {
         return size;
     }
+    
+    public void printCelebrate(){
+        System.out.println("Celebrate good times come on!");
+    }
 
-    private static class Node {
+    protected static class Node {
 
-        private int data;
-        private Node next;
+        protected int data;
+        protected Node next;
 
         public Node(int value) {
             this.data = value;
