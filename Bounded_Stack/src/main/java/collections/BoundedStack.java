@@ -19,6 +19,9 @@ public class BoundedStack extends Stack{
     
     public BoundedStack(int capacity){
         super();
+        if(capacity <= 0){
+            throw new IllegalArgumentException("Stack capacity cannot be less than 1");
+        }
         this.capacity = capacity;
     }
     
