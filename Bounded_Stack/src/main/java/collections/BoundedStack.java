@@ -4,8 +4,6 @@
  */
 package collections;
 
-import java.util.EmptyStackException;
-
 /**
  *
  * @author michelle
@@ -32,7 +30,7 @@ public class BoundedStack extends Stack{
     public boolean push(int value) {
         // Add logic specific to this structure
         if(isFull()){
-            throw new EmptyStackException();
+            throw new StackFullException();
         }
         // Reuse existing superclass methods where possible
         return super.push(value);
