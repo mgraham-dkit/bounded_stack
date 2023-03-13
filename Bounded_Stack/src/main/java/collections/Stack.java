@@ -11,7 +11,7 @@ import java.util.EmptyStackException;
  * @author grahamm
  */
 public class Stack {
-    private static final int INITIAL_CAPACITY = 10;
+    private static final int DEFAULT_CAPACITY = 10;
     private final int capacity;
     private Node first;
     private int size;
@@ -19,7 +19,7 @@ public class Stack {
     public Stack() {
         first = null;
         size = 0;
-        capacity = INITIAL_CAPACITY;
+        capacity = DEFAULT_CAPACITY;
     }
     
     public Stack(int capacity){
